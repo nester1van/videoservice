@@ -1,0 +1,77 @@
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(51, 51, 51, 0.6);
+  z-index: 1;
+
+
+  /* temp 
+  display: none;*/
+}
+
+.popup-login { 
+  margin: auto;
+  width: 304px;
+  height: 394px;
+  padding-left: 36px;
+  padding-right: 36px;
+  background-color: rgba(255, 255, 255);
+  border-radius: 8px;
+  text-align: center;
+}
+.popup-login_hidden { }
+
+.popup-login__title {
+  font-size: 28px;
+  line-height: 33px;
+  font-weight: bold;
+  margin-top: 36px;
+  margin-bottom: 24px;
+}
+
+.popup-login__name {
+  display: block; 
+  width: 232px;
+  margin-bottom: 24px;
+}
+.popup-login__password {
+  display: block; 
+  width: 232px;
+  margin-bottom: 23px;
+}
+
+.pop-login__remember-box {
+
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -10px;
+}
+
+.pop-login__remember-box:checked {
+  color: var(--red);
+  background-color: #fff;
+}
+
+.pop-login__remember-label { 
+  font-size: 16px;
+  line-height: 19px;
+  display: inline-block;
+  margin-bottom: 111px;
+  margin-right: 120px;
+}
+
+.popup-login__button-login { 
+  display: block;
+  margin: 0 auto;
+}
+
+#modal-login {
+  display: none;
+}

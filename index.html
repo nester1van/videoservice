@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Видеосервис</title>
-  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="./css/stylesheet.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/modal.css">
 </head>
 <body>
   <div class="wrapper">
+
     <header class="header">
       <div class="container flex-container">
         <div class="brand">
@@ -21,15 +24,20 @@
           <input class="search__button" type="submit" name="submit_search" value="Найти">
         </div>
         <div class="login">
-          <button class="button login__button-login" value="Войти">Войти</button>
-          <div class="login__user-name login__user-name_hidden">Константин К.</div>
-          <button class="button login__logout-button login__logout-button_hidden" value="Войти">Выйти</button>
+          <button id="btn-login" class="button login__button-login" value="Войти">Войти</button>
+          <div id="block-logout">
+            <div id="name-text" class="login__user-name login__user-name_hidden">Константин К.</div>
+            <input id="name-input" type="text">
+            <button id="btn-logout" class="button login__logout-button login__logout-button_hidden" value="Войти">Выйти</button>
+          </div> 
         </div>
       </div>
     </header>
+
     <main class="main">
       <div class="container flex-container">
         <div class="tabs">
+
           <div class="tab-films">
             <h2 class="tab-films__title">Фильмы</h2>
             <div class="new">
@@ -84,6 +92,7 @@
               </div>
             </div>
           </div>
+          
           <div class="tab-channels tab-channels_hidden">
             <h2 class="tab-channels__title">Телеканалы</h2>
             <div class="tab-channels__content">
@@ -202,6 +211,7 @@
         </div>
       </div>
     </main>
+    
     <footer class="footer">
       <div class="contacts container">
         <div class="contacts__logo">
@@ -215,14 +225,15 @@
       </div>
     </footer>
   </div>
-  <div class="popup">
+  
+  <div id="modal-login" class="popup">
     <div class="popup-login popup-login_hidden">
       <h2 class="pop-login__title">Вход</h2>
       <input class="input-text popup-login__name" type="text" placeholder="Логин">
       <input class="input-text popup-login__password" type="password" placeholder="Пароль">
       <input class="pop-login__remember-box" type="checkbox" value="Запомнить" id="remember">
       <label class="pop-login__remember-label" for="remember">Запомнить</label>
-      <input class="button popup-login__button-login" type="submit" value="Войти">
+      <input id="login-submit" class="button popup-login__button-login" type="submit" value="Войти">
     </div>
   </div>
 
@@ -250,5 +261,7 @@
    -->
 
   <script src="js/index.js"></script>
+  <script src="./js/nameText-nameInput.js"></script>
+  <script src="./js/modal.js"></script>
 </body>
 </html>
