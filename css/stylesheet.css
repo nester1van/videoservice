@@ -1,7 +1,10 @@
+@import 'normalize.css';
+
 :root {
   --black: #333333;
   --red: #E5261E;
 }
+
 
 @font-face {
   font-family: Rubik-Medium;
@@ -10,7 +13,6 @@
 
 html, body {
   margin: 0;
-  padding: 0;
   padding: 0;
   width: 100%;
   height: 100%;
@@ -21,10 +23,6 @@ html, body {
 * {
   box-sizing: border-box;
 }
-
-/* [class$="hidden"] {
-  display: none;
-} */
 
 .wrapper {
   display: flex;
@@ -110,6 +108,7 @@ padding-top: 20px;
 
 .search__input {
   width: 320px;
+  font-weight: normal;
 }
 
 .search__button {
@@ -137,14 +136,22 @@ padding-top: 20px;
   background-color: #CC221B;
 }
 
-.login__userName {}
+/* temp start*/
+.login__user-input {
+  cursor: pointer;
+  border: none;
+  width: 115px;
+  margin-right: 16px;
+}
+
+.login__user-input:focus {
+  cursor: text;
+  border-bottom: 1px solid var(--black);
+}
+/* temp end */
 
 .login__logout-button { }
 .login__logout-button_hidden { }
-
-#name-input {
-  display: none;
-}
 
 #block-logout {
   display: none;
@@ -167,6 +174,7 @@ padding-top: 20px;
   font-size: 28px;
   line-height: 33px;
   font-weight: bold;
+  letter-spacing: 1px;
   display: inline;
   padding-bottom: 9px;
   border: none;
@@ -344,68 +352,4 @@ padding-top: 20px;
 ::-webkit-scrollbar-thumb {
   background-color: #BDBDBD;
   border-radius: 2px;
-}
-
-
-/* DELETE BEFORE END */
-
-.upper
-{
-  margin:30px;
-  display:flex;
-  flex-direction:row;
-  width:300px;
-  height:80px;
-  border:1px red solid;
-
-  padding:5px; /* this */
-}
-
-.upper > div
-{
-  flex:1 1 auto;
-  border:1px red solid;
-  text-align:center;
-
-  margin:5px;  /* and that, will result in a 10px gap */
-}
-
-
-.wrap {
-  max-width: 1180px;
-  margin: 0 auto;
-}
-
-.par {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.child {
-  flex: 0 0 calc(1/4 * 100% - (1 - 1/4) * 20px);
-  margin: 20px 20px 0 0;
-  min-height: 200px;
-  /* width: calc(1/4 * 100% - (1 - 1/4) * 20px); */
-}
-
-.child:nth-child(2n) {
-  background-color: #fde;
-}
-
-.child:nth-child(2n + 1) {
-  background-color: #afe;
-}
-
-.par > .child:nth-child(4n) {
-  margin-right: 0;
-}
-
-.par::after {
-  content: '';
-  flex: auto;
-}
-
-.par > .child:nth-child(-n+4) {
-  margin-top: 0;
 }

@@ -9,7 +9,6 @@ for (let film of films) {
 function showDescription(film) {
   let filmImage = film.firstChild.nextElementSibling;
   let filmDescription = film.lastChild.previousElementSibling;
-  console.log(filmDescription);
   filmImage.style.opacity = "0.8";
   filmImage.style.filter = "brightness(0.3)";
   filmDescription.style.visibility = "visible";

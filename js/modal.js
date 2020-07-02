@@ -9,7 +9,8 @@
     modalLogin.style.display = 'flex';
   }
 
-  loginSubmit.onclick = function() {
+  loginSubmit.onclick = function(e) {
+    e.preventDefault();
     modalLogin.style.display = 'none';
     btnLogin.style.display = 'none';
     blockLogout.style.display = 'block';
